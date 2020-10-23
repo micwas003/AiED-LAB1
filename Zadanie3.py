@@ -13,7 +13,7 @@ for zbior, nazwa_zbioru in [(pd_test, "Testowy Zbior"), (pd_train, "Treningowy Z
         print("Analiza dla etykiety:".format(column))
         print("Ilość wartości w zbiorze (per kolumna):".format(zbior.count()[column]))
         print("Ilość wartości unikatowych w zbiorze (per kolumna):".format(zbior[column].nunique()))
-        print("Wartość średnia w zbiorze (per kolumna):".format(zbior[column].mean(axis=0)))
+        print("Wartość średnia w zbiorze (per kolumna, bez null):".format(zbior[column].mean(axis=0)))
         print("Ilość wartości null w zbiorze (per kolumna):".format(zbior[column].isnull().sum()))
         print("Wartość maksymalna w zbiorze (per kolumna):".format(zbior[column].max()))
         print("Wartość minimalna w zbiorze (per kolumna):".format(zbior[column].min()))
